@@ -24,8 +24,8 @@ public class RecargaController {
 	private final OperadorService operadorService;
 	
 	@PostMapping("/recarga")
-	public ResponseEntity<Void> recarga(@RequestBody  Operador recarga ) throws IOException {
-		operadorService.validarMetodo(recarga);
+	public ResponseEntity<Void> recargaOperador(@RequestBody  Operador recarga ) throws IOException {
+		operadorService.recargaOperador(recarga);
 		return new ResponseEntity<>(HttpStatus.CREATED); 
 	}
 

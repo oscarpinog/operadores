@@ -6,7 +6,7 @@ import co.proyect.pruebas.back.dto.Operador;
 
 public interface OperadorService {
 
-	void validarMetodo(Operador operador);
+	void recargaOperador(Operador operador);
 
 	List<Operador> getAllOperador();
 

@@ -1,14 +1,11 @@
 package co.proyect.pruebas.back.serviceImpl;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import co.proyect.pruebas.back.dto.Claro;
 import co.proyect.pruebas.back.dto.Movistar;
@@ -26,7 +23,7 @@ public class OperadorServiceImpl implements OperadorService{
 	private final OperadorRepository operadorRepository;
 	
 	@Override
-	public void validarMetodo(Operador operador) {
+	public void recargaOperador(Operador operador) {
 		
 		OperadorEntity operadorEntity = new OperadorEntity();
         BeanUtils.copyProperties(operador, operadorEntity);
